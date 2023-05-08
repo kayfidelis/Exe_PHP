@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tudo.css"/>
+    <script language="JavaScript">
+        function verifica()
+        {
+            if (document.getElementById("txtnum").value!="")
+                document.getElementById("btncal").removeAttribute("disabled");
+            else
+                document.getElementById("btncal").setAttribute("disabled","disabled");
+               
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="tabuada.php">
+        <h1>Tabuada</h1>
+        <label for="txtnum">Informe o número:</label>
+        <input type="number" name="txtnum" id="txtnum" onmouseout="verifica()"/>
+    </br>
+        <input type="submit" id="btncal" value="Calcular" class="input" disabled  />
+    
+        <input type="reset" id="btnlimp" value="Limpar" class="input"/>
+    
+    <input type="button" id="btnvolta" value="Menu" onclick="location.href='index.html'" class="input"/>
+    </form>
+</body>
+</html>
